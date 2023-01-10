@@ -25,7 +25,7 @@ app.get('/api/hello', function (req, res) {
   res.json({ greeting: 'hello API' });
 });
 app.post('/api/shorturl', function (req, res) {
-  let regex = /^(https:\/\/)/
+  let regex = /^(https?:\/\/)/
   let regel = /\/\w+/g
   let ori = req.body.url
   let original = ori.replace(regex, "")
