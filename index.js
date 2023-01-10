@@ -26,7 +26,7 @@ app.get('/api/hello', function (req, res) {
 });
 app.post('/api/shorturl', function (req, res) {
   let regex = /^(https?:\/\/)/
-  let regel = /\/\w+/g
+  let regel = /\/.+/g
   let ori = req.body.url
   let original = ori.replace(regex, "")
   dns.lookup(original.replace(regel, ""), function (err, address, family) {
